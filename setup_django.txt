@@ -1,0 +1,30 @@
+touch requirements.txt
+pip install -r requirements.txt
+
+django-admin startproject django_project .
+
+python3 manage.py startapp post
+# add startapp name into settings 'installed apps'
+# create database in a separate terminal in postgresql
+# enter database settings in settings.py
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'parker',
+        'USER': 'TimJo',
+        'PASSWORD': '',
+        'HOST': 'localhost',
+        'PORT': 5432,
+
+    }
+}
+
+python3 manage.py makemigrations - создание миграций
+python3 manage.py migrate - проведение миграции
+
+python3 manage.py createsuperuser - создание администратора
+
+git init
+touch .gitignore
+(google gitignore io)-> paste all into .gitignore
